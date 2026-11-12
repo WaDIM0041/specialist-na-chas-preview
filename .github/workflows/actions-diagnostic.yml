@@ -1,0 +1,14 @@
+name: Actions diagnostic
+on:
+  push:
+    paths:
+      - .github/workflows/actions-diagnostic.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify runner
+        run: echo 'GitHub Actions runner started successfully'
